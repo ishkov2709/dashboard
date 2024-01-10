@@ -1,0 +1,119 @@
+.sidebar {
+  @extend %shadow;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 306px;
+  min-height: 100vh;
+
+  padding: 36px 28px 76px 28px;
+}
+
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 64px;
+
+  color: $primaryBlackColor;
+
+  line-height: 1.5;
+}
+
+.logo__icon {
+}
+
+.logo__text {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.logo__version {
+  margin-left: 4px;
+  font-size: 10px;
+
+  color: $greyColor;
+}
+
+.sidebar_nav {
+  margin-bottom: auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.list__item {
+}
+
+.list__button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 11px;
+
+  background: transparent;
+  color: $titleColor;
+
+  border: none;
+  border-radius: 8px;
+
+  transition: background 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.list__button:hover,
+.list__button:focus {
+  background-color: $targetBgColor;
+}
+
+.list__button--active,
+.list__button--active:hover,
+.list__button--active:focus {
+  background-color: $accentBgBtnColor;
+  color: $primaryWhiteColor;
+}
+
+.list__icon {
+  margin-right: 14px;
+}
+
+.list__text {
+  text-transform: capitalize;
+}
+
+.list__arrow {
+  margin: 0 0 0 auto;
+
+  stroke: transparent;
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 20px;
+
+  line-height: 1.5;
+}
+
+.user__photo {
+  border-radius: 50%;
+}
+
+.user__name {
+  font-size: 14px;
+}
+
+.user__position {
+  color: $positionColor;
+
+  font-size: 12px;
+  font-weight: 400;
+}

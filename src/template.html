@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <svg class="logo__icon" width="37" height="37">
+            <use href="./sprite.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Dashboard<span class="logo__version">v.01</span></p>
+        </div>
+
+        <nav class="sidebar_nav">
+          <ul class="nav__list"></ul>
+        </nav>
+
+        <div class="sidebar__user">
+          <svg class="user__photo" width="42" height="42">
+            <use href="./sprite.svg#user"></use>
+          </svg>
+          <div class="user__wrapper">
+            <p class="user__name">Evano</p>
+            <p class="user__position">Project Manager</p>
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <h1 class="main__welcome">Hello <span class="welcome__user"></span>👋🏼,</h1>
+        <section class="main__section">
+          <div class="section__tools">
+            <div class="tools__unitebox">
+              <h2 class="tools__title">All Customers</h2>
+              <button type="button" class="tools__switch">
+                <span class="switch__variant--active">Active Members</span>
+              </button>
+            </div>
+            <label class="tools__search">
+              <input class="search__input" type="text" placeholder="Search" />
+              <svg class="search__icon" width="24" height="24">
+                <use href="./sprite.svg#search"></use>
+              </svg>
+            </label>
+          </div>
+          <table class="section__table">
+            <thead class="table__head">
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

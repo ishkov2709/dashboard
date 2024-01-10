@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+image {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.inside-transparent {
+  fill: transparent;
+  stroke: currentColor;
+}
+
+.outside-transparent {
+  fill: currentColor;
+  stroke: transparent;
+}
