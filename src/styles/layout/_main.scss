@@ -19,6 +19,8 @@ main {
 .main__section {
   @extend %shadow;
 
+  width: 968px;
+
   background-color: $primaryWhiteColor;
 
   border-radius: 30px;
@@ -40,16 +42,13 @@ main {
 
 .tools__switch {
   background: transparent;
+  color: $positiveColor;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 1.33;
 
   border: none;
-}
-
-.switch__variant--active {
-  color: $positiveColor;
 }
 
 .tools__search {
@@ -98,8 +97,124 @@ main {
   color: $placeholderColor;
 }
 
-.section__table {
+.section__box {
+  margin-bottom: 32px;
+}
+
+.box__table {
+  width: 100%;
+
+  margin-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.33;
+
+  border-collapse: collapse;
 }
 
 .table__head {
+}
+
+.table__title {
+  padding: 24px 0;
+
+  text-align: justify;
+
+  color: $placeholderColor;
+}
+
+.title__status {
+  width: 80px;
+
+  display: block;
+
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.table__row {
+}
+
+.table__row--fullborder {
+  border-bottom: 1px solid $separatorColor;
+}
+
+.table__row--semiborder {
+  position: relative;
+}
+
+.table__row--semiborder::after {
+  content: '';
+  width: 888px;
+  height: 1px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: block;
+
+  background-color: $separatorColor;
+}
+
+.table__item {
+  padding: 24px 0;
+  text-align: start;
+}
+
+.table__title:first-of-type,
+.table__item:first-of-type {
+  padding-left: 38px;
+}
+
+.table__title:last-of-type,
+.table__item:last-of-type {
+  padding-right: 38px;
+}
+
+.item__value {
+  display: block;
+
+  margin-left: auto;
+  padding: 4px;
+
+  width: 80px;
+
+  text-align: center;
+
+  border-radius: 4px;
+}
+
+.item__value--active {
+  background-color: $positiveBgColor;
+  color: $positiveTextColor;
+
+  border: 1px solid $positiveColor;
+}
+
+.item__value--inactive {
+  background-color: $negativeBgColor;
+  color: $negativeColor;
+
+  border: 1px solid $negativeColor;
+}
+
+.section__pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 40px 40px 38px;
+}
+
+.pagination__info {
+  color: $placeholderColor;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.33;
 }
