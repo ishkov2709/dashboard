@@ -27,9 +27,7 @@ export const handleInputSearch = (filteredData, refs, countState, pagination) =>
     const searchValue = target.value.toLowerCase()
 
     filteredData = data.filter((el) =>
-      Object.values(el).some((e) =>
-        typeof e === 'string' ? e.toLowerCase().includes(searchValue) : false
-      )
+      Object.values(el).some((e) => String(e).toLowerCase().includes(searchValue))
     )
 
     refs.tableBody.innerHTML = calcTableData(filteredData, countState, tableItem)

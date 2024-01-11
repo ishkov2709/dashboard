@@ -57,7 +57,5 @@ document.addEventListener('DOMContentLoaded', () => {
     'input',
     handleInputSearch(filteredData, refs, countState, pagination)
   )
-  refs.menuBtn.addEventListener('click', () => {
-    refs.sidabar.classList.toggle('open')
-  })
+  refs.menuBtn.addEventListener('click', () => refs.sidabar.classList.toggle('open'))
 })
