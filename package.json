@@ -1,6 +1,7 @@
 {
   "name": "dashboard",
   "version": "0.1.0",
+  "homepage": "https://ishkov2709.github.io/dashboard/",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -8,7 +9,8 @@
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint 'src/**/*.js' || true",
-    "prettify": "prettier --write 'src/**/*.js'"
+    "prettify": "prettier --write 'src/**/*.js'",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "webpack",
@@ -43,6 +45,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "modern-normalize": "^2.0.0",
     "tui-pagination": "^3.4.1"
   }
