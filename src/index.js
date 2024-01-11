@@ -4,13 +4,8 @@ import countInfo from './js/components/countInfo'
 import tableItem from './js/components/tableItem'
 import Pagination from 'tui-pagination'
 import calcTableData from './js/utils/calcTableData'
-import {
-  handleClickMembers,
-  handleClickNav,
-  handleInputSearch,
-  handlePagination,
-} from './js/handlers'
-import '@/styles/index.scss'
+import { handleClickNav, handleInputSearch, handlePagination } from './js/handlers'
+import './styles/index.scss'
 import 'tui-pagination/dist/tui-pagination.css'
 
 const refs = {
