@@ -3,9 +3,34 @@ main {
 
   min-height: 100vh;
 
-  padding: 41px 71px;
+  padding: 40px 0 0 0;
 
-  background-color: $mainBgColor;
+  @media screen and (min-width: 1440px) {
+    padding: 41px 71px;
+  }
+}
+
+.main__container {
+  padding: 0 8px;
+
+  @media screen and (min-width: 1440px) {
+    padding: 0;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+
+  background: transparent;
+  color: $greyColor;
+
+  border: none;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
 }
 
 .main__welcome {
@@ -19,17 +44,28 @@ main {
 .main__section {
   @extend %shadow;
 
-  width: 968px;
+  width: auto;
 
   background-color: $primaryWhiteColor;
 
   border-radius: 30px;
+
+  @media screen and (min-width: 1440px) {
+    width: 968px;
+  }
 }
 
 .section__tools {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
   padding: 30px 53px 40px 38px;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .tools__title {
@@ -107,10 +143,19 @@ main {
   margin-bottom: 32px;
 
   font-weight: 500;
-  font-size: 14px;
+
+  font-size: 8px;
   line-height: 1.33;
 
   border-collapse: collapse;
+
+  @media screen and (min-width: 768px) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .table__head {
@@ -125,13 +170,17 @@ main {
 }
 
 .title__status {
-  width: 80px;
+  width: 40px;
 
   display: block;
 
   margin-left: auto;
 
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    width: 80px;
+  }
 }
 
 .table__row {
@@ -147,7 +196,7 @@ main {
 
 .table__row--semiborder::after {
   content: '';
-  width: 888px;
+  width: 340px;
   height: 1px;
 
   position: absolute;
@@ -159,6 +208,14 @@ main {
   display: block;
 
   background-color: $separatorColor;
+
+  @media screen and (min-width: 768px) {
+    width: 666px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 888px;
+  }
 }
 
 .table__item {
@@ -168,12 +225,20 @@ main {
 
 .table__title:first-of-type,
 .table__item:first-of-type {
-  padding-left: 38px;
+  padding-left: 8px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 38px;
+  }
 }
 
 .table__title:last-of-type,
 .table__item:last-of-type {
-  padding-right: 38px;
+  padding-right: 8px;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 38px;
+  }
 }
 
 .item__value {
@@ -182,11 +247,15 @@ main {
   margin-left: auto;
   padding: 4px;
 
-  width: 80px;
+  width: 40px;
 
   text-align: center;
 
   border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 80px;
+  }
 }
 
 .item__value--active {
@@ -205,10 +274,17 @@ main {
 
 .section__pagination {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
 
   padding: 30px 40px 40px 38px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .pagination__info {

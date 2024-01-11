@@ -9,6 +9,8 @@ import './styles/index.scss'
 import 'tui-pagination/dist/tui-pagination.css'
 
 const refs = {
+  sidabar: document.querySelector('.sidebar'),
+  menuBtn: document.querySelector('.menu'),
   navList: document.querySelector('.nav__list'),
   walcomeUser: document.querySelector('.welcome__user'),
   tableBody: document.querySelector('.table__body'),
@@ -37,7 +39,7 @@ let filteredData = [...data]
 const options = {
   totalItems: filteredData.length,
   itemsPerPage: 8,
-  visiblePages: 5,
+  visiblePages: 4,
   page: countState.page,
 }
 let pagination = new Pagination('pagination', options)
@@ -55,4 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'input',
     handleInputSearch(filteredData, refs, countState, pagination)
   )
+  refs.menuBtn.addEventListener('click', () => {
+    refs.sidabar.classList.toggle('open')
+  })
 })
